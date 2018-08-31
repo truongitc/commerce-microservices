@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: gateway
+zuul:
+  host:
+    max-per-route-connections: 100
+    max-total-connections: 1000
+  semaphore:
+    max-semaphores: 500
+  routes:
+    product:
+      path: /apiproduct/**
+      serviceId: product
+    cart:
+      path: /cart/**
+      serviceId: cart
+    catalog:
+      path: /catalog/**
+      serviceId: catalog
+ribbon:
+  eureka:
+    enabled: true
+management:
+  security:
+    enabled: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
