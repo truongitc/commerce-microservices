@@ -5,5 +5,7 @@ spring:
     active: local
   cloud:
     config:
-      uri: http://localhost:8001
+      hostname: localhost
+      port: 8001
+      uri: http://${spring.cloud.config.hostname}:${spring.cloud.config.port}
       fail-fast: true

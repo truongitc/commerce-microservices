@@ -1,12 +1,10 @@
 spring:
-  application:
-    name: configuration-microservice
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/Uchihaaaa/commerce-microservices/tree/master/configuration/src/main/resources/shared
+        #native:
+          #search-locations: classpath:/shared
   profiles:
     active: native
-server:
-  port: 8001
