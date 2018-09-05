@@ -13,12 +13,6 @@ zuul:
     product:
       path: /apiproduct/**
       serviceId: product
-    cart:
-      path: /cart/**
-      serviceId: cart
-    catalog:
-      path: /catalog/**
-      serviceId: catalog
 ribbon:
   eureka:
     enabled: true

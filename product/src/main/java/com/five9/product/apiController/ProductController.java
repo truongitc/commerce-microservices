@@ -5,6 +5,7 @@ import com.five9.product.apiModel.Catalog;
 import com.five9.product.apiModel.Product;
 import com.five9.product.apiService.ProductServcie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
+@RefreshScope
 public class ProductController {
 
     @Autowired

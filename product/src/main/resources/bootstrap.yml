@@ -2,10 +2,16 @@ spring:
   application:
     name: product
   profiles:
-    active: local
+    active: native
   cloud:
     config:
-      hostname: localhost
-      port: 8001
-      uri: http://${spring.cloud.config.hostname}:${spring.cloud.config.port}
+      uri: http://localhost:8001
       fail-fast: true
+
+management:
+  security:
+    enabled: false
+
+endpoints:
+  actuator:
+    enabled: true

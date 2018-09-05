@@ -1,0 +1,5 @@
+FROM openjdk:10-jre-slim
+COPY ./target/discovery.jar /usr/src/hola/
+WORKDIR /usr/src/hola
+EXPOSE 8080
+CMD ["java", "-jar", "discovery.jar"]
