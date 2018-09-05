@@ -7,12 +7,17 @@ zuul:
   host:
     max-per-route-connections: 100
     max-total-connections: 1000
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 10000
   semaphore:
     max-semaphores: 500
   routes:
     product:
       path: /apiproduct/**
       serviceId: product
+    cart:
+      path: /apicart/**
+      serviceId: cart
 ribbon:
   eureka:
     enabled: true

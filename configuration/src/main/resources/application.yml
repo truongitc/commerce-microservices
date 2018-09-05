@@ -8,5 +8,3 @@ spring:
           #search-locations: classpath:/shared
         bootstrap: true
         clone-on-start: true
-  profiles:
-    active: native
